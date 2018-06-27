@@ -1,0 +1,2 @@
+# StudyShell
+shell script practices
