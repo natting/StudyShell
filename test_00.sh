@@ -7,6 +7,12 @@ function string_test() {
 string_test2() {
 	echo "string test 2222"
 }
+# 변수는 ${xxx} 로 하는게 맘편함.
+# @ 는 argument
+string_test3() {
+	echo "string test 3333"
+	echo "argument : ${@}"
+}
 
 a=5
 b=10
@@ -43,3 +49,5 @@ done
 # function test
 string_test
 string_test2
+# 변수로 입력 가능==> $@
+string_test3 "natting" "test" "1234" "789456123"
