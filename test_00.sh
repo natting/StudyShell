@@ -20,3 +20,10 @@ result=`expr $a \* $b`
 echo "a*b = $result"
 result=`expr $b / $a`
 echo "b/a=$result"
+
+i=1
+while [ $i -lt 4 ]
+do
+	echo $i
+	i=$(($i+1))
+done
