@@ -1,4 +1,12 @@
 #! /bin/bash
+#function test
+function string_test() {
+	echo "string test 1111"
+}
+# function 은 생략가능
+string_test2() {
+	echo "string test 2222"
+}
 
 a=5
 b=10
@@ -27,3 +35,5 @@ do
 	echo $i
 	i=$(($i+1))
 done
+string_test
+string_test2
