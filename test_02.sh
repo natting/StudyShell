@@ -16,6 +16,7 @@ echo "hello world 출력: ${array[0]} ${array[3]}"
 echo "배열 전체 출력: ${array[@]}"
 echo "배열 전체 개수 출력: ${#array[@]}"
 
+# 배열갯수만큼 출력됨...왜??
 printf "배열 출력: %s\n" ${array[@]}
 
 # 배열 특정 요소만 지우기
