@@ -43,7 +43,7 @@ i=1
 while [ $i -lt 4 ]
 do
 	echo $i
-	i=$(($i+1))
+	i=$(($i+1))#i=$($i+1) 은 에러 
 done
 
 # function test
