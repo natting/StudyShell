@@ -46,3 +46,53 @@ until [ ${count2} -le 5 ]; do
     echo ${count2}
     count2=$(( ${count2}-1 ))
 done
+
+#======================================================
+# if else
+string1="hello"
+string2="world"
+if [ ${string1} == ${string2} ]; then
+    # 실행 문장이 없으면 오류 발생함
+    # 아래 echo 문장을 주석처리하면 확인 가능함
+    echo "hello world"
+elif [ ${string1} == ${string3} ]; then
+    echo "hello world 2"
+else
+    echo "hello world 3"
+fi
+
+# AND
+if [ ${string1} == ${string2} ] && [ ${string3} == ${string4} ]
+	echo "not possible"
+# OR
+if [ ${string1} == ${string2} ] || [ ${string3} == ${string4} ]
+	echo "not possible"
+# 다중 조건
+if [[ ${string1} == ${string2} || ${string3} == ${string4} ]] && [ ${string5} == ${string6} ]
+	echo "not possible"
+
+#=======================================================
+# case문 테스트를 위한 반복문 : ;;로 종료
+for string in "HELLO" "WORLD" "hello" "world" "s" "start" "end" "etc"; do
+    # case문 시작
+    case ${string} in
+        hello|HELLO)
+            echo "${string}: hello 일때"
+            ;;
+        wo*)
+            echo "${string}: wo로 시작하는 단어 일때"
+            ;;
+        s|start)
+            echo "${string}: s 혹은 start 일때"
+            ;;
+        e|end)
+            echo "${string}: s 혹은 start 일때"
+            ;;
+        *)
+            echo "${string}: 기타"
+            ;;
+    esac
+    # //case문 끝
+done
+#for test END
+#=========================================================================
